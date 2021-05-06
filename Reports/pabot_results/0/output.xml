@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.8.5 on win32)" generated="20210506 19:41:09.589" rpa="false" schemaversion="2">
+<suite id="s1" name="InfogixApplication">
+<suite id="s1-s1" name="TC001 FillForm" source="C:\Users\91994\PycharmProjects\Robot FrameWork\Infogix\TestCases\TC001_FillForm.robot">
+<test id="s1-s1-t1" name="TC001 Fill Form">
+<kw name="Launch Browser" library="Commonfile" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210506 19:41:10.013" level="INFO">Opening browser 'Chrome' to base url 'https://www.infogix.com/'.</msg>
+<status status="PASS" starttime="20210506 19:41:10.013" endtime="20210506 19:42:11.077"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210506 19:42:11.079" endtime="20210506 19:42:11.547"/>
+</kw>
+<status status="PASS" starttime="20210506 19:41:10.011" endtime="20210506 19:42:11.547"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20210506 19:42:11.547" endtime="20210506 19:42:11.559"/>
+</kw>
+<kw name="Click on Contact Link" library="ContactPageKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Contact</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:11.564" level="INFO">Clicking link 'Contact'.</msg>
+<status status="PASS" starttime="20210506 19:42:11.562" endtime="20210506 19:42:53.847"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:11.560" endtime="20210506 19:42:53.848"/>
+</kw>
+<kw name="Verify the PageTitle" library="ContactPageKeywords">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${contactpagetitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210506 19:42:53.921" level="INFO">${contactpagetitle} = Contact | Learn More | Want to join our team? | Infogix</msg>
+<status status="PASS" starttime="20210506 19:42:53.853" endtime="20210506 19:42:53.921"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${contactpagetitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210506 19:42:53.924" level="INFO">Contact | Learn More | Want to join our team? | Infogix</msg>
+<status status="PASS" starttime="20210506 19:42:53.922" endtime="20210506 19:42:53.924"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:53.849" endtime="20210506 19:42:53.926"/>
+</kw>
+<kw name="Verify Text on the Page" library="ContactPageKeywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Connect with Infogix</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210506 19:42:54.020" level="INFO">Current page contains text 'Connect with Infogix'.</msg>
+<status status="PASS" starttime="20210506 19:42:53.929" endtime="20210506 19:42:54.021"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:53.926" endtime="20210506 19:42:54.021"/>
+</kw>
+<kw name="Enter the details" library="ContactPageKeywords">
+<arg>${input_firstname}</arg>
+<arg>${input_lastname}</arg>
+<arg>${input_companyname}</arg>
+<arg>${input_email}</arg>
+<arg>${input_phonenumber}</arg>
+<arg>${select_country}</arg>
+<arg>${select_industry}</arg>
+<arg>${input_comments}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${First_name}</arg>
+<arg>${input_firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:54.022" level="INFO">Typing text 'Shruthi' into text field 'id:FirstName'.</msg>
+<status status="PASS" starttime="20210506 19:42:54.022" endtime="20210506 19:42:54.478"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${last_name}</arg>
+<arg>${input_lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:54.479" level="INFO">Typing text 'S V' into text field 'id:LastName'.</msg>
+<status status="PASS" starttime="20210506 19:42:54.478" endtime="20210506 19:42:54.660"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Company_name}</arg>
+<arg>${input_companyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:54.661" level="INFO">Typing text 'Infogix HR' into text field '//input[@id='Company']'.</msg>
+<status status="PASS" starttime="20210506 19:42:54.660" endtime="20210506 19:42:54.856"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<arg>${input_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:54.858" level="INFO">Typing text 'shruthi.qaauto@gmail.com' into text field 'css:input[id='Email']'.</msg>
+<status status="PASS" starttime="20210506 19:42:54.857" endtime="20210506 19:42:55.105"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${phone_no}</arg>
+<arg>${input_phonenumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:55.106" level="INFO">Typing text '8660211151' into text field 'css:#Phone'.</msg>
+<status status="PASS" starttime="20210506 19:42:55.105" endtime="20210506 19:42:55.288"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${HQ_Location_Country}</arg>
+<arg>${select_country}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20210506 19:42:55.288" level="INFO">Selecting options from selection list 'name:HQ_Location_Country__c' by label United States.</msg>
+<status status="PASS" starttime="20210506 19:42:55.288" endtime="20210506 19:42:55.540"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${Industry}</arg>
+<arg>${select_industry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210506 19:42:55.543" level="INFO">Selecting options from selection list 'name:Industry__c' by value Media &amp; Communication.</msg>
+<status status="PASS" starttime="20210506 19:42:55.541" endtime="20210506 19:42:55.822"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Comments}</arg>
+<arg>${input_comments}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:55.827" level="INFO">Typing text 'Please Forward this to HR' into text field 'id:Next_Step_Comments__c'.</msg>
+<status status="PASS" starttime="20210506 19:42:55.823" endtime="20210506 19:42:56.231"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:56.232" level="INFO">Clicking element 'xpath://label[text()='I agree to receive communications from Infogix']/following-sibling::div[2]/label'.</msg>
+<status status="PASS" starttime="20210506 19:42:56.231" endtime="20210506 19:42:56.400"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Submit_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:56.402" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" starttime="20210506 19:42:56.401" endtime="20210506 19:43:06.754"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:54.022" endtime="20210506 19:43:06.756"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Thank You!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20210506 19:43:06.757" endtime="20210506 19:43:15.589"/>
+</kw>
+<kw name="Close Browser" library="Commonfile" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210506 19:43:15.592" endtime="20210506 19:43:18.017"/>
+</kw>
+<status status="PASS" starttime="20210506 19:43:15.591" endtime="20210506 19:43:18.018"/>
+</kw>
+<status status="PASS" starttime="20210506 19:41:10.011" endtime="20210506 19:43:18.020"/>
+</test>
+<doc>Verify the User can Succesfully fill the form and Submit the data</doc>
+<status status="PASS" starttime="20210506 19:41:09.619" endtime="20210506 19:43:18.020"/>
+</suite>
+<status status="PASS" starttime="20210506 19:41:09.590" endtime="20210506 19:43:18.026"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="InfogixApplication">InfogixApplication</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TC001 FillForm">InfogixApplication.TC001 FillForm</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

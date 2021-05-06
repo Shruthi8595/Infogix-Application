@@ -1,0 +1,6 @@
+datasources:24234e31725357d169dc306d60717daea2218519
+commandlineoptions:3b076c954bc587df4576753f8b90e0adcedf8ce0
+suitesfrom:no-suites-from-option
+file:a75ca6e63015de28f63bb6cd282bec7627e010f8
+--suite InfogixApplication.TC001 FillForm
+--suite InfogixApplication.TC002 SearchTab

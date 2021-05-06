@@ -1,0 +1,14 @@
+==============================================================================
+InfogixApplication                                                            
+==============================================================================
+InfogixApplication.TC001 FillForm :: Verify the User can Succesfully fill t...
+==============================================================================
+TC001 Fill Form                                                       | PASS |
+------------------------------------------------------------------------------
+InfogixApplication.TC001 FillForm :: Verify the User can Succesful... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+InfogixApplication                                                    | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\91994\PycharmProjects\Robot FrameWork\Infogix\Reports\pabot_results\0\output.xml

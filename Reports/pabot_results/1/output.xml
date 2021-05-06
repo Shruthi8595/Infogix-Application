@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.8.5 on win32)" generated="20210506 19:41:09.586" rpa="false" schemaversion="2">
+<suite id="s1" name="InfogixApplication">
+<suite id="s1-s1" name="TC002 SearchTab" source="C:\Users\91994\PycharmProjects\Robot FrameWork\Infogix\TestCases\TC002_SearchTab.robot">
+<test id="s1-s1-t1" name="TC002 Search Tab">
+<kw name="Launch Browser" library="Commonfile" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210506 19:41:10.008" level="INFO">Opening browser 'Chrome' to base url 'https://www.infogix.com/'.</msg>
+<status status="PASS" starttime="20210506 19:41:10.008" endtime="20210506 19:41:25.763"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210506 19:41:25.763" endtime="20210506 19:41:25.967"/>
+</kw>
+<status status="PASS" starttime="20210506 19:41:10.008" endtime="20210506 19:41:25.968"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210506 19:41:30.985" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210506 19:41:25.969" endtime="20210506 19:41:30.986"/>
+</kw>
+<kw name="Click on Search Icon" library="SearchKeyword">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${search_key}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210506 19:41:30.987" level="INFO">Clicking link 'xpath://a[@class='search-site']'.</msg>
+<status status="PASS" starttime="20210506 19:41:30.987" endtime="20210506 19:41:31.336"/>
+</kw>
+<status status="PASS" starttime="20210506 19:41:30.987" endtime="20210506 19:41:31.337"/>
+</kw>
+<kw name="Search Goven" library="SearchKeyword">
+<arg>${Text}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${type_text}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210506 19:41:31.341" level="INFO">Typing text 'govern' into text field 'xpath://input[@class='searchfor']'.</msg>
+<status status="PASS" starttime="20210506 19:41:31.338" endtime="20210506 19:41:31.474"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${type_text}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210506 19:41:31.475" level="INFO">Sending key(s) ('ENTER',) to xpath://input[@class='searchfor'] element.</msg>
+<msg timestamp="20210506 19:41:31.787" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20210506 19:41:31.787" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20210506 19:41:31.474" endtime="20210506 19:42:20.736"/>
+</kw>
+<status status="PASS" starttime="20210506 19:41:31.337" endtime="20210506 19:42:20.738"/>
+</kw>
+<kw name="Verify PageTitle" library="SearchKeyword">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${PageTitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210506 19:42:20.818" level="INFO">${PageTitle} = You searched for govern | Infogix</msg>
+<status status="PASS" starttime="20210506 19:42:20.739" endtime="20210506 19:42:20.819"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PageTitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210506 19:42:20.819" endtime="20210506 19:42:20.822"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:20.739" endtime="20210506 19:42:20.822"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>You searched for govern | Infogix</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210506 19:42:20.887" level="INFO">Page title is 'You searched for govern | Infogix'.</msg>
+<status status="PASS" starttime="20210506 19:42:20.823" endtime="20210506 19:42:20.887"/>
+</kw>
+<kw name="Click on NextPage" library="SearchKeyword">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${next_page}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:20.887" level="INFO">Clicking link 'xpath://a[contains(text(),'Next Page')]'.</msg>
+<status status="PASS" starttime="20210506 19:42:20.887" endtime="20210506 19:42:50.619"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:20.887" endtime="20210506 19:42:50.620"/>
+</kw>
+<kw name="Get the Text" library="SearchKeyword">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${textofthelink}</var>
+<arg>//ul[@class='reset']/li[4]/div/div/h4</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:50.709" level="INFO">${textofthelink} = BUILDING DATA TRUST WITH STRATEGIC DATA GOVERNANCE</msg>
+<status status="PASS" starttime="20210506 19:42:50.622" endtime="20210506 19:42:50.709"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${textofthelink}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210506 19:42:50.711" level="INFO">BUILDING DATA TRUST WITH STRATEGIC DATA GOVERNANCE</msg>
+<status status="PASS" starttime="20210506 19:42:50.709" endtime="20210506 19:42:50.712"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:50.620" endtime="20210506 19:42:50.712"/>
+</kw>
+<kw name="Verify Text" library="SearchKeyword">
+<arg>${textshouldbe}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${text_of_link}</arg>
+<arg>${textshouldbe}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20210506 19:42:50.715" level="INFO">Verifying element 'xpath://a[contains(text(),'Building Data Trust with Strategic Data Governance')]' contains exact text 'BUILDING DATA TRUST WITH STRATEGIC DATA GOVERNANCE'.</msg>
+<status status="PASS" starttime="20210506 19:42:50.715" endtime="20210506 19:42:50.853"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:50.713" endtime="20210506 19:42:50.853"/>
+</kw>
+<kw name="Click on View" library="SearchKeyword">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${click_view}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210506 19:42:50.853" level="INFO">Clicking link 'xpath://ul[@class='reset']/li[4]/div/div/a'.</msg>
+<status status="PASS" starttime="20210506 19:42:50.853" endtime="20210506 19:42:57.806"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:50.853" endtime="20210506 19:42:57.806"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Building Data Trust with Strategic Data Governance | Infogix</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210506 19:42:57.864" level="INFO">Page title is 'Building Data Trust with Strategic Data Governance | Infogix'.</msg>
+<status status="PASS" starttime="20210506 19:42:57.806" endtime="20210506 19:42:57.864"/>
+</kw>
+<kw name="Verify Current URL" library="SearchKeyword">
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${currenturl}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20210506 19:42:57.912" level="INFO">${currenturl} = https://www.infogix.com/building-data-trust-throughbuilding-successful-data-governance/</msg>
+<status status="PASS" starttime="20210506 19:42:57.864" endtime="20210506 19:42:57.912"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${currenturl} is the Current URL and Actual URL</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210506 19:42:57.912" endtime="20210506 19:42:57.912"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${expectedUrl} is the 404 error page url</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210506 19:42:57.912" endtime="20210506 19:42:57.920"/>
+</kw>
+<kw name="Should Not Be Equal As Strings" library="BuiltIn">
+<arg>${currenturl}</arg>
+<arg>${expectedUrl}</arg>
+<doc>Fails if objects are equal after converting them to strings.</doc>
+<status status="PASS" starttime="20210506 19:42:57.921" endtime="20210506 19:42:57.923"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:57.864" endtime="20210506 19:42:57.923"/>
+</kw>
+<kw name="Close Browser" library="Commonfile" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210506 19:42:57.923" endtime="20210506 19:43:00.350"/>
+</kw>
+<status status="PASS" starttime="20210506 19:42:57.923" endtime="20210506 19:43:00.351"/>
+</kw>
+<status status="PASS" starttime="20210506 19:41:10.006" endtime="20210506 19:43:00.351"/>
+</test>
+<doc>Test case 2:Verify if the link "regulatory compliance" is targetting https://www.infogix.com/solutions/regulatory-compliance/</doc>
+<status status="PASS" starttime="20210506 19:41:09.618" endtime="20210506 19:43:00.351"/>
+</suite>
+<status status="PASS" starttime="20210506 19:41:09.587" endtime="20210506 19:43:00.351"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="InfogixApplication">InfogixApplication</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TC002 SearchTab">InfogixApplication.TC002 SearchTab</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

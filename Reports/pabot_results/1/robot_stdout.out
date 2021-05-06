@@ -1,0 +1,17 @@
+==============================================================================
+InfogixApplication                                                            
+==============================================================================
+InfogixApplication.TC002 SearchTab :: Test case 2:Verify if the link "regul...
+==============================================================================
+TC002 Search Tab                                                      You searched for govern | Infogix
+https://www.infogix.com/building-data-trust-throughbuilding-successful-data-governance/ is the Current URL and Actual URL
+"https://www.infogix.com/solutions/regulatory-compliance/" is the 404 error page url
+| PASS |
+------------------------------------------------------------------------------
+InfogixApplication.TC002 SearchTab :: Test case 2:Verify if the li... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+InfogixApplication                                                    | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\91994\PycharmProjects\Robot FrameWork\Infogix\Reports\pabot_results\1\output.xml
